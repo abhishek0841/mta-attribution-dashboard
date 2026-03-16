@@ -1,0 +1,36 @@
+# Multi-Touch Attribution Dashboard Configuration
+
+data:
+  n_users: 5000
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+  conversion_rate: 0.35
+  random_seed: 42
+
+models:
+  time_decay_rate: 7          # half-life in days for Time-Decay model
+  position_first_weight: 0.40 # U-shaped first-touch weight
+  position_last_weight: 0.40  # U-shaped last-touch weight
+
+channels:
+  - Email
+  - Social
+  - Display
+  - Search
+  - Affiliate
+
+campaigns:
+  - Spring_Sale
+  - Summer_Promo
+  - Black_Friday
+  - New_Year
+  - Back_to_School
+
+dashboard:
+  title: "Multi-Touch Attribution Dashboard"
+  theme: "light"
+  cache_ttl: 3600  # seconds
+
+logging:
+  level: INFO
+  format: "%(asctime)s %(levelname)s %(name)s: %(message)s"
